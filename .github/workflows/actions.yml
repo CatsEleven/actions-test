@@ -3,6 +3,10 @@ on:
   push:
   workflow_dispatch: 
 
+permissions:
+  contents: write  # コンテンツへの書き込み権限を付与
+  checks: write    # チェックランの作成権限を付与
+
 jobs:
   pytest:
     runs-on: ubuntu-latest
